@@ -66,28 +66,40 @@ Observed = 28378 / (28378 + 28325) = 0.5005
 For each of your evaluation metrics, give a 95% confidence interval around the difference between the experiment and control groups. Indicate whether each metric is statistically and practically significant. (These should be the answers from the "Effect Size Tests" quiz.)
 
 ```
-*Gross Conversion*: Lower bound = -0.0291, Upper bound = -0.0120
+Gross Conversion: Lower bound = -0.0291, Upper bound = -0.0120
 	Statistical Significance: Yes, Practical Significance: Yes
 
-*Net Conversion*: Lower bound = -0.0116, Upper bound = 0.0019
+Net Conversion: Lower bound = -0.0116, Upper bound = 0.0019
 	Statistical Significance: No, Practical Significance: No
 ```
 
 ####Sign Tests
 
+```
 Gross Conversion: p-value = 0.0026, Statistical Significance = Yes
 Net Conversion: p-value = 0.6776, Statistical Significance = No
+```
 
 ####Summary
 *State whether you used the Bonferroni correction, and explain why or why not. If there are any discrepancies between the effect size hypothesis tests and the sign tests, describe the discrepancy and why you think it arose.*
 
 I didn’t use Bonferroni correction because the metrics are not independent.
 
+Both effect size tests and sign tests result in having statistical significance in **Gross Conversion** but no statistical significance in **Net Conversion**. This means that although the experiment affects the users' decision to enroll the online courses but it didn't affect much to the enrolled users to pay the courses.
+
 ####Recommendation
 Make a recommendation and briefly describe your reasoning.
 
+What we want to acheive to have more students pay for the classes and finish their classes. What I really want to the is the ratio of the number of students finishing the courses to the number of students paying the courses. From the tests we performed the above, the pop up message certainly filtered the students who can't spend more than 5 hours to study for the online courses. Although the message didn't affect the **Net Conversion** significantly, it is possible that, among those who paid the courses, there are more enthusiastic students who will finish the courses.
 
 ###Follow-Up Experiment
 Give a high-level description of the follow up experiment you would run, what your hypothesis would be, what metrics you would want to measure, what your unit of diversion would be, and your reasoning for these choices.
 
+I will perform the follow up experiment on those who paid the courses and see their activities on the Udacity website. So the hypothesis will be 
+
+```
+The users who paid the courses after they passed the 5 hour pop-up message have higher probability of finishing the courses than those who paid the courses without the pop-up message.
+``` 
+
+Since I am performing an experiment on users who paid, I can use **use-id** as an unit of diversion. I will use the number of clicks and the number of cookies as invariant metrics for the same reason they are used in the experiment above. And I will use **click-through-probability** on **next lesson** button on each lesson as an evaluation metric. It is difficult to evaluate the users' probability of finishing the courses because it takes very long time for people to finish them (it may take more than a year). However, by looking at the **click-through-probability** of users can give us some insights that who are studying more. And another good evaluation invariant to use is **the rate of people who paid the second payment after 30 days of the first payment**. This value can imply users' willingness to finish the courses.
 
