@@ -16,9 +16,11 @@ I didn’t choose retention as an evaluation metric because this value seems to 
 ###Measuring Standard Deviation
 List the standard deviation of each of your evaluation metrics. (These should be the answers from the "Calculating standard deviation" quiz.)
 
+```
 Standard Deviation of Gross Conversion: **0.0202**
 
 Standard Deviation of Net Conversion: **0.0156**
+```
 
 **Gross Conversion** and **Net Conversion** have the same number of records and the same denominator, the number of clicks. Since I expected the number of payments would be smaller than the number of enrollments, smaller value of **Net Conversion** is reasonable. 
 
@@ -43,7 +45,7 @@ Only 50% will be affected and the change due to the experiment is small, so it w
 ###Experiment Analysis
 ####Sanity Checks
 
-'''
+```
 Number of cookies: Lower bound = 0.4988, Upper bound = 0.5012, Observed = 0.5006: Passed
 SE = sqrt( p * (1-p) * (1/Number of Control Pageviews + 1/Number of Experiment Pageviews)
 = sqrt( 0.5 * 0.5 * (1/344660 + 1/345543) = 0.0006
@@ -57,7 +59,7 @@ SE = sqrt( p * (1-p) * (1/Number of Control Clicks + 1/Number of Experiment Clic
 Margin of error = 0.0021 * 1.96 = 0.0041
 Lower bound = 0.5 – 0.0041 = 0.4959, Upper bound = 0.5 + 0.0041 = 0.5041
 Observed = 28378 / (28378 + 28325) = 0.5005
-'''
+```
 
 ###Result Analysis
 ####Effect Size Tests
