@@ -16,12 +16,11 @@ I didn’t choose retention as an evaluation metric because this value seems to 
 ###Measuring Standard Deviation
 List the standard deviation of each of your evaluation metrics. (These should be the answers from the "Calculating standard deviation" quiz.)
 
-Standard Deviation of Gross Conversion: 0.0202
-Standard Deviation of Net Conversion: 0.0156
+Standard Deviation of Gross Conversion: **0.0202**
 
+Standard Deviation of Net Conversion: **0.0156**
 
-
-For each of your evaluation metrics, indicate whether you think the analytic estimate would be comparable to the the empirical variability, or whether you expect them to be different (in which case it might be worth doing an empirical estimate if there is time). Briefly give your reasoning in each case.
+**Gross Conversion** and **Net Conversion** have the same number of records and the same denominator, the number of clicks. Since I expected the number of payments would be smaller than the number of enrollments, smaller value of **Net Conversion** is reasonable. 
 
 ###Sizing
 ####Number of Samples vs. Power
@@ -35,13 +34,16 @@ I calculated the pageviews from the calculator from http://www.evanmiller.org/ab
 
 ####Duration vs. Exposure
 
-The fraction of traffic I would divert to this experiment is 1 (from 0 to 1). Given this fraction, I need 685,325 / 40,000 = 17.13 -> 18 days to run the experiment.
+The fraction of traffic I would divert to this experiment is .5 (from 0 to 1). Given this fraction, I need 685,325 / 40,000 = 34.__ -> 35 days to run the experiment.
 
-Give your reasoning for the fraction you chose to divert. How risky do you think this experiment would be for Udacity?
+*Give your reasoning for the fraction you chose to divert. How risky do you think this experiment would be for Udacity?*
+
+Only 50% will be affected and the change due to the experiment is small, so it won't cause too much trouble in the overall business. Furthermore, 35 days of the experiment is the enough amount of time to really know if the change really affects the users' decisions to take the course.
 
 ###Experiment Analysis
 ####Sanity Checks
 
+'''
 Number of cookies: Lower bound = 0.4988, Upper bound = 0.5012, Observed = 0.5006: Passed
 SE = sqrt( p * (1-p) * (1/Number of Control Pageviews + 1/Number of Experiment Pageviews)
 = sqrt( 0.5 * 0.5 * (1/344660 + 1/345543) = 0.0006
@@ -55,7 +57,7 @@ SE = sqrt( p * (1-p) * (1/Number of Control Clicks + 1/Number of Experiment Clic
 Margin of error = 0.0021 * 1.96 = 0.0041
 Lower bound = 0.5 – 0.0041 = 0.4959, Upper bound = 0.5 + 0.0041 = 0.5041
 Observed = 28378 / (28378 + 28325) = 0.5005
-
+'''
 
 ###Result Analysis
 ####Effect Size Tests
@@ -76,9 +78,7 @@ Net Conversion: p-value = 0.6776, Statistical Significance = No
 ####Summary
 State whether you used the Bonferroni correction, and explain why or why not. If there are any discrepancies between the effect size hypothesis tests and the sign tests, describe the discrepancy and why you think it arose.
 
-I didn’t use Bonferroni correction because …
-
-
+I didn’t use Bonferroni correction because the metrics are not independent.
 
 ####Recommendation
 Make a recommendation and briefly describe your reasoning.
