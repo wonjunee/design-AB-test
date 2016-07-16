@@ -65,12 +65,13 @@ Observed = 28378 / (28378 + 28325) = 0.5005
 ####Effect Size Tests
 For each of your evaluation metrics, give a 95% confidence interval around the difference between the experiment and control groups. Indicate whether each metric is statistically and practically significant. (These should be the answers from the "Effect Size Tests" quiz.)
 
+```
 *Gross Conversion*: Lower bound = -0.0291, Upper bound = -0.0120
 	Statistical Significance: Yes, Practical Significance: Yes
 
 *Net Conversion*: Lower bound = -0.0116, Upper bound = 0.0019
 	Statistical Significance: No, Practical Significance: No
-
+```
 
 ####Sign Tests
 
@@ -78,7 +79,7 @@ Gross Conversion: p-value = 0.0026, Statistical Significance = Yes
 Net Conversion: p-value = 0.6776, Statistical Significance = No
 
 ####Summary
-State whether you used the Bonferroni correction, and explain why or why not. If there are any discrepancies between the effect size hypothesis tests and the sign tests, describe the discrepancy and why you think it arose.
+*State whether you used the Bonferroni correction, and explain why or why not. If there are any discrepancies between the effect size hypothesis tests and the sign tests, describe the discrepancy and why you think it arose.*
 
 I didn’t use Bonferroni correction because the metrics are not independent.
 
