@@ -4,14 +4,16 @@
 ###Experiment Design
 ####Metric Choice
 *Invariant metrics*: Number of Cookies and Number of clicks
-I chose the number of cookies and the number of clicks as invariant metrics because these two values will be consistent throughout the experiment. These two values can be calculated before users decide to enroll so they won’t be affected by the experiment.
-
-I didn’t choose the number of user-ids as an invariant metric because this metric is based on whether the user decides to enroll, so it will be affected by the experiment and won’t be consistent.
-
 *Evaluation metrics*: Gross Conversion and Net Conversion
-From the experiment, we want to know whether pop-up message asking the possible commitment to the degree affects students to enroll the free trial and make payments. These two metrics provide the values to analyze the results of the experiment. I will calculate if the experiment group has lower Gross Conversion and Net Conversion than the control group.
 
-I didn’t choose retention as an evaluation metric because this value seems to be redundant. This value can be calculated the already chosen evaluation metrics above.
+- **Number of cookies**: I chose it as an invariant metric because it will be consistent throughout the experiment. It is calculated before the user sees the pop-up messsage, so the number will be similar in experimenta and control groups.
+- **Number of user-ids**: I didn't choose this as an invariant metric because this value is based on whether the user decide to enroll after the pop-up message. So the number of user-ids might be different between the experiment and control groups. It is not a good evaluation metric as well because the the values can be different in each day. 
+- **Number of clicks**: Similar to the number of cookies, this value is independent from the experiment, so the number will be similar in experiment and control groups.
+- **Click-through-probability**: A good invariant metric because it is independent from the experiment. However, I didn't choose this metric as an invariant metric for the test because this value seems to be redundant to the number of cookies and the number of clicks.
+- **Gross Conversion**: This is a good evaluation metric because it is dependent on the experiment (This explains why it cannot be a good invariant metric). We expect that the value will be lower in the experiment group because some people who are not able to commit more than 5 hours per week won't enroll the classes.
+- **Retention**: This is a good evaluation metric because it is dependent on the experiment (This explains why it cannot be a good invariant metric). We expect this value will be higher in the experiment group because majority of the group are those who can commit 5 hours per week and theses people are more likely to make the first payments for the classes. However, I didn't choose this as an evaluation metric for the test because it is redundant to Gross conversion and Net conversion.
+- **Net Conversion**: This is a good evaluation metric because it is dependent on the experiment (This explains why it cannot be a good invariant metric). We expect this value will be higher in the experiment group because majority of the group are those who can commit 5 hours per week and theses people are more likely to make the first payments for the classes (The assumption and expectation are similar to Retention).
+
 
 ###Measuring Standard Deviation
 List the standard deviation of each of your evaluation metrics. (These should be the answers from the "Calculating standard deviation" quiz.)
